@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_URL__c</fullName>
+    <description>Direct path to a specific file (object) stored in an Amazon S3 bucket.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Direct path to a specific file (object) stored in an Amazon S3 bucket.</inlineHelpText>
+    <label>Object URL</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

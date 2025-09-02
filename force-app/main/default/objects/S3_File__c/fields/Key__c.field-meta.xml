@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key__c</fullName>
+    <description>Unique identifier for a file (object) within a specific S3 bucket. It&apos;s essentially the full path to the object inside the bucket.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unique identifier for a file (object) within a specific S3 bucket. It&apos;s essentially the full path to the object inside the bucket.</inlineHelpText>
+    <label>Key</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

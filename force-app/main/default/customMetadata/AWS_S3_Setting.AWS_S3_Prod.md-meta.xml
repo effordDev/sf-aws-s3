@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>AWS S3 aded-gms-s3 Dev</label>
+    <protected>false</protected>
+    <values>
+        <field>Access_Key__c</field>
+        <value xsi:type="xsd:string">access key</value>
+    </values>
+    <values>
+        <field>Bucket__c</field>
+        <value xsi:type="xsd:string">bucket_for_files</value>
+    </values>
+    <values>
+        <field>File_Size_Limit_Mb__c</field>
+        <value xsi:type="xsd:double">50.0</value>
+    </values>
+    <values>
+        <field>Identity_Pool_Id__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Production__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">region</value>
+    </values>
+    <values>
+        <field>Secret_Access_Key__c</field>
+        <value xsi:type="xsd:string">secret access key</value>
+    </values>
+</CustomMetadata>

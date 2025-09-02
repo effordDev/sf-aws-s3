@@ -1,0 +1,83 @@
+<template>
+   <div class={boxClass}>
+
+        <!-- minimumUploadNumber : {minimumUploadNumber} <br />
+        maximumUploadNumber : {maximumUploadNumber} <br />
+        formattedAcceptedFormats : {formattedAcceptedFormats} <br />
+        minUploadsReached : {minUploadsReached} <br />
+        maxUploadsReached : {maxUploadsReached} <br />
+        readOnly : {readOnly} <br />
+        allowUpload : {allowUpload} <br /> -->
+
+       <label class="slds-form-element__label" for="unique-id-of-input">
+           <template lwc:if={required}>
+               <span style="color: red"> *&nbsp; </span> 
+           </template
+           >{label} 
+       </label>
+
+       <br />
+
+        <template lwc:if={maxUploadsReached}>
+			<div class="file-inner-text">You have uploaded the maximum number of files. ({maximumUploadNumber})</div>
+		</template>
+        <template lwc:else>	
+            
+            <div class="slds-text-color_weak accepted-types">
+				Accepted Formats: {formattedAcceptedFormats}
+			</div>
+            <div class="slds-text-color_weak accepted-types">
+				Minimum Files: {minimumUploadNumber}
+			</div>
+            <div class="slds-text-color_weak accepted-types">
+				Maximum Files: {maximumUploadNumber}
+			</div>
+
+            <template lwc:if={allowUpload}>
+                <lightning-input 
+                    type="file" 
+                    name={label}
+                    accept={acceptedFormats}
+                    disabled={readOnly}
+                    onchange={handleUpload}
+                    multiple
+                ></lightning-input>
+            </template>
+
+        </template>
+        
+        <c-application-s3-file-input-list
+            allow-view
+            allow-delete={allowDelete}
+            files={files}
+            onfiledeleted={handleFileDeleted}
+        ></c-application-s3-file-input-list>
+   </div>
+
+   <template lwc:if={showLoadingModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+                    {modalMessage}
+
+                    <br />
+
+                    {progressBarValue}%
+                    <lightning-progress-bar 
+                        value={progressBarValue}
+                        size="large" 
+                        variant="circular"
+                    ></lightning-progress-bar>
+                </div>
+                <div class="slds-modal__footer slds-modal__footer_directional">
+                    <lightning-button
+                        label="Continue"
+                        onclick={handleCloseModal}
+                    ></lightning-button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

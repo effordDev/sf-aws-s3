@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+
+    <isExposed>true</isExposed>
+    <masterLabel>AWS S3 Files</masterLabel>
+    <description>AWS S3 Files</description>
+
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property 
+                name="bucketVisibility" 
+                type="String" 
+                default="internal"
+                required="true"
+                label="Select the bucket for viewing and uploading files" 
+                description="Internal should be used for files that should only be view by interal users. External should be used for portal users. (The S3 bucket will look like 'Account/0013i00002yGG9dAAG/(internal or external)')" 
+                datasource="apex://AWSS3BucketVisibilityPicklist"
+            />
+            <property 
+                name="isTableView" 
+                label="Display Files in table view" 
+                type="Boolean" 
+                default="false"
+            />
+            <property 
+                name="allowUpload" 
+                label="Allow uploading of files" 
+                type="Boolean" 
+                default="true"
+            />
+            <property 
+                name="allowView" 
+                label="Allow viewing of files"
+                type="Boolean" 
+                default="true"
+            />
+            <property 
+                name="allowDelete" 
+                label="Allow delete of files"
+                type="Boolean" 
+                default="true"
+            />
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" default="{!recordId}" type="String"/>
+            <property 
+                name="bucketVisibility" 
+                type="String" 
+                default="external"
+                required="true"
+                label="Select the bucket for viewing and uploading files" 
+                description="Internal should be used for files that should only be view by interal users. External should be used for portal users. (The S3 bucket will look like 'Account/0013i00002yGG9dAAG/(internal or external)')" 
+                datasource="apex://AWSS3BucketVisibilityPicklist"
+            />
+            <property 
+                name="allowUpload" 
+                label="Allow uploading of files" 
+                type="Boolean" 
+                default="false"
+            />
+            <property 
+                name="allowView" 
+                label="Allow viewing of files"
+                type="Boolean" 
+                default="false"
+            />
+            <property 
+                name="allowDelete" 
+                label="Allow delete of files"
+                type="Boolean" 
+                default="false"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

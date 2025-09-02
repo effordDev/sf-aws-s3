@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Info__c</fullName>
+    <externalId>false</externalId>
+    <formula>/* MONTH(LastModifiedDate) + &apos; &apos; + DAY(LastModifiedDate) + &apos;, &apos; + YEAR(LastModifiedDate) 
++ &apos; • &apos; +  Size_Label__c  
++ &apos; • &apos; + File_Extension__c
+
+*/
+if(ISBLANK(S3_File_Object__c), &apos;&apos;, S3_File_Object__c &amp; &apos; • &apos;) + 
+CASE(MONTH(DATEVALUE(LastModifiedDate)),
+  1, &quot;Jan&quot;,
+  2, &quot;Feb&quot;,
+  3, &quot;Mar&quot;,
+  4, &quot;Apr&quot;,
+  5, &quot;May&quot;,
+  6, &quot;Jun&quot;,
+  7, &quot;Jul&quot;,
+  8, &quot;Aug&quot;,
+  9, &quot;Sep&quot;,
+  10, &quot;Oct&quot;,
+  11, &quot;Nov&quot;,
+  12, &quot;Dec&quot;,
+  &quot;?&quot;
+) &amp; &apos; &apos; &amp;
+TEXT(DAY(DATEVALUE(LastModifiedDate))) &amp; &apos;, &apos; &amp;
+TEXT(YEAR(DATEVALUE(LastModifiedDate))) &amp;
+&apos; • &apos; &amp; Size_Label__c &amp;
+&apos; • &apos; &amp; File_Extension__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>File Info</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

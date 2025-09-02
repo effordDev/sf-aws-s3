@@ -1,0 +1,61 @@
+iframe{
+    height: 80vh;
+}
+
+.container {
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.file-name {
+    color: #181818;
+    font-weight: 500;
+}
+
+.file-info {
+    /* margin-bottom: 5px;
+    margin-left: 15px; */
+    font-size: 10;
+    color: #444444
+}
+
+.icon-group {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.box {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.view-icon {
+    --slds-c-icon-color-foreground: #3a632eff
+}
+.view-in-tab-icon {
+    --slds-c-icon-color-foreground: #646be9ff
+}
+.delete-icon {
+    --slds-c-icon-color-foreground: #ce3434c3
+}
+
+.file-item-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* spacing between icon and text */
+}
+
+.icon-wrap {
+    flex-shrink: 0; /* prevent icon from resizing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.files {
+    display: flex;
+    flex-direction: column;
+}

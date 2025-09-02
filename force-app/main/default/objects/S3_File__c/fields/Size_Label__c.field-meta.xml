@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Size_Label__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Size_Megabytes__c)) &amp;&amp; VALUE(Size_Megabytes__c) &gt;= 1,
+    TEXT(ROUND(VALUE(Size_Megabytes__c), 2)) &amp; &quot; MB&quot;,
+    IF(
+        NOT(ISBLANK(Size_Kilobytes__c)) &amp;&amp; VALUE(Size_Kilobytes__c) &gt;= 1,
+        TEXT(ROUND(VALUE(Size_Kilobytes__c), 2)) &amp; &quot; KB&quot;,
+        TEXT(ROUND(VALUE(Size_Bytes__c), 2)) &amp; &quot; B&quot;
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Size Label</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
