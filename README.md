@@ -2,6 +2,14 @@
 
 [Contribution Guide](https://github.com/effordDev/contribution)
 
+## Prerequisites 
+Install [sf-application](https://github.com/effordDev/sf-application)
+
+![alt text](image.png)
+
+Then deploy this branch
+![alt text](image-1.png)
+
 ## Overview
 
 This package implements an AWS S3-backed file storage flow in Salesforce using Apex utilities and Lightning Web Components (LWCs). It includes configuration for CSP Trusted Sites (for Experience Cloud/Lightning fetch/XHR), and (optionally) Remote Site Settings for Apex callouts.

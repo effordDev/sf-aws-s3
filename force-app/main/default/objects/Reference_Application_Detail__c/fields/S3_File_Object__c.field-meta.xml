@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S3_File_Object__c</fullName>
+    <description>Object to put file in s3. (Ex. Account/001cp00000OrGSUAA3/external/DriversLicense/myLicense.png - it would be DriversLicense)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Object to put file in s3. (Ex. Account/001cp00000OrGSUAA3/external/DriversLicense/myLicense.png - it would be DriversLicense)</inlineHelpText>
+    <label>S3 File Object</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
