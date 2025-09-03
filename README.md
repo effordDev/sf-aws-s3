@@ -2,6 +2,8 @@
 
 [Contribution Guide](https://github.com/effordDev/contribution)
 
+This branch is for you are using [sf-application](https://github.com/effordDev/sf-application) and want to upload files to aws s3 instead of hosting files in salesforce. This will allow you to create inputs that upload files to s3.
+
 ## Prerequisites 
 Install [sf-application](https://github.com/effordDev/sf-application)
 
