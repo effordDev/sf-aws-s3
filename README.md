@@ -1,5 +1,7 @@
 # Salesforce S3 Integration — Technical Documentation
 
+[![Deploy with reapd](https://reapd.io/badge.svg)](https://reapd.io/app?author=effordDev&repo=sf-aws-s3&branch=main)
+
 [Contribution Guide](https://github.com/effordDev/contribution)
 
 ## Overview
